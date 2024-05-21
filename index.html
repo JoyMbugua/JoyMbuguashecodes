@@ -4,34 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>App Weather</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <input type="search" placeholder="Enter a city..." required />
-      <input type="submit" value="Search" />
-    </header>
-    <main>
-      <div class="weather-app-data">
-        <h1>Sydney</h1>
-        <p>
-          Thursday 15:20, Scattered clouds
-          <br />
-          Humidity:66%; Wind:3.13km/h
-          <br />
-        </p>
-      </div>
-      <div class="city-temperature-container">
-        <div class="temperature-icon">⛅</div>
-        <div class="current-temperature">12</div>
-        <div class="temperature-unit">&deg C</div>
-      </div>
-    </main>
+    <div class="weather-app">
+      <header>
+        <input
+          type="search"
+          placeholder="Enter a city..."
+          required
+          class="search-form-input"
+        />
+        <input type="submit" value="Search" class="search-form-button" />
+      </header>
+      <main>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="city">Sydney</h1>
+            <p>
+              Thursday 15:20, Scattered clouds
+              <br />
+              Humidity: 66%; Wind: 3.13km/h
+              <br />
+            </p>
+          </div>
+          <div class="city-temperature-container">
+            <div class="temperature-icon">⛅</div>
+            <div class="current-temperature">12</div>
+            <div class="temperature-unit">&deg C</div>
+          </div>
+        </div>
+      </main>
 
-    <footer>
-      This Project was coded by<a href="#" target="_blank">Joy Mbugua</a> and is
-      <a href="#" target="_blank">open-sourced on GitHub</a> and
-      <a href="#" target="_blank">hosted on GitHub Pages</a>
-    </footer>
+      <footer>
+        This Project was coded by<a href="#" target="_blank">Joy Mbugua</a> and
+        is <a href="#" target="_blank">open-sourced on GitHub</a> and
+        <a href="#" target="_blank">hosted on GitHub Pages</a>
+      </footer>
+    </div>
   </body>
 </html>
