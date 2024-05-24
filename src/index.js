@@ -45,11 +45,13 @@ function searchCity(city) {
   axios.get(apiUrl).then(showCurrentWeather);
 }
 
-function Submit(event) {
+function serchSubmit(event) {
   event.preventDefault();
   let SearchInput = document.querySelector("#search-form-input");
+
+  searchCity(searchInput.value);
 }
 
 let SearchForm = document.querySelector("#search-form");
-SearchForm.addEventListener("submit", Submit);
+SearchForm.addEventListener("submit", searchSubmit);
 searchCity("Sydney");
