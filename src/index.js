@@ -1,5 +1,5 @@
 function showCurrentWeather(response) {
-  let temperatureElement = document.querySelector("#current-temperature");
+  let temperatureElement = document.getElementById(`current-temperature`);
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
