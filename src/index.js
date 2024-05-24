@@ -16,8 +16,8 @@ function showCurrentWeather(response) {
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   timeElement.innerHTML = currentDate(date);
-  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windSpeedElement.innerHTML = `${response.data.wind.speed}m/h`;
+  humidityElement.innerHTML = `Humidity: ${response.data.temperature.humidity}%`;
+  windSpeedElement.innerHTML = `Wind-speed: ${response.data.wind.speed}mph`;
   temperatureElement.innerHTML = math.round(temperature);
 }
 
@@ -37,7 +37,10 @@ function currentDate(date) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  return `${day}${hours}:${minutes}`;
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  return `${day} ${hours}:${minutes}`;
 }
 function searchCity(city) {
   let apikey = "0de40f3ac6t7b9b23817fc4oa7443d4f";
