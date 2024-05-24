@@ -2,9 +2,42 @@ import axios from "axios";
 function showCurrentWeather(response) {
   let temperatureElement = document.querySelector("#current-temperature");
   let temperature = response.data.temperature.current;
-  temperatureElement.innerHTML = math.round(temperature);
   let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windSpeedElement = document.querySelector("#wind-speed");
+  let timeElement = document.querySelector("#time");
+  let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
+
+  iconElement.innerHTML = `<img 
+              src="${response.data.condition.icon_url}"
+              class="temperature-icon"/>`;
   cityElement.innerHTML = response.data.city;
+  descriptionElement.innerHTML = response.data.condition.description;
+  timeElement.innerHTML = currentDate(date);
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  windSpeedElement.innerHTML = `${response.data.wind.speed}m/h`;
+  temperatureElement.innerHTML = math.round(temperature);
+}
+
+function currentDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${day}${hours}:${minutes}`;
 }
 function searchCity(city) {
   let apikey = "0de40f3ac6t7b9b23817fc4oa7443d4f";
