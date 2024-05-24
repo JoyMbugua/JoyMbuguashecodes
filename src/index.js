@@ -1,4 +1,3 @@
-import axios from "axios";
 function showCurrentWeather(response) {
   let temperatureElement = document.querySelector("#current-temperature");
   let temperature = response.data.temperature.current;
@@ -50,11 +49,11 @@ function searchCity(city) {
 
 function searchSubmit(event) {
   event.preventDefault();
-  let SearchInput = document.querySelector("#search-form-input");
+  let searchInput = document.querySelector("#search-form-input");
 
-  searchCity(SearchInput.value);
+  searchCity(searchInput.value);
 }
 
-let SearchForm = document.querySelector("#search-form");
-SearchForm.addEventListener("submit", searchSubmit);
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", searchSubmit);
 searchCity("Sydney");

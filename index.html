@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://cdnjs.com/libraries/axios"></script>
     <title>App Weather</title>
     <link rel="stylesheet" href="src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,7 +22,7 @@
             placeholder="Enter a city..."
             required
             class="search-form-input"
-            id="searchFormInput"
+            id="search-form-input"
           />
           <input type="submit" value="search" class="search-form-button" />
         </form>
@@ -35,14 +35,14 @@
               <span id="time">Thursday 15:20</span>,
               <span id="description">Scattered clouds</span>
               <br />
-              <span id="humidity"> Humidity : </span>;
+              <span id="humidity"> Humidity : </span>
               <span id="wind-speed"> Wind : </span>
               <br />
             </p>
           </div>
           <div class="city-temperature-container">
             <div id="icon"></div>
-            <div class="current-temperature" id="current-temperature"></div>
+            <div class="current-temperature" id="current-temperature">21</div>
             <div class="temperature-unit">&deg C</div>
           </div>
         </div>
@@ -64,6 +64,6 @@
         >
       </footer>
     </div>
-    <script type="module" src="src/index.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
