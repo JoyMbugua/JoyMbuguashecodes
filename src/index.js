@@ -1,4 +1,3 @@
-import axios from "axios";
 function showCurrentWeather(response) {
   let temperatureElement = document.getElementById("current-temperature");
   let temperature = response.data.temperature.current;
@@ -18,7 +17,7 @@ function showCurrentWeather(response) {
   timeElement.innerHTML = currentDate(date);
   humidityElement.innerHTML = `Humidity: ${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `Wind-speed: ${response.data.wind.speed}mph`;
-  temperatureElement.innerHTML = math.round(temperature);
+  temperatureElement.innerHTML = Math.round(temperature);
 }
 
 function currentDate(date) {
