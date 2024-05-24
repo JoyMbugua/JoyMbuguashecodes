@@ -45,11 +45,11 @@ function searchCity(city) {
   axios.get(apiUrl).then(showCurrentWeather);
 }
 
-function serchSubmit(event) {
+function searchSubmit(event) {
   event.preventDefault();
   let SearchInput = document.querySelector("#search-form-input");
 
-  searchCity(searchInput.value);
+  searchCity(SearchInput.value);
 }
 
 let SearchForm = document.querySelector("#search-form");
