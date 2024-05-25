@@ -1,7 +1,6 @@
-import axios from "axios";
 function showCurrentWeather(response) {
   let currentTemperature = document.getElementById(`current-temperature`);
-  let temperature = response.data.main.temperature;
+  let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
